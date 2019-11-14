@@ -7,10 +7,6 @@ import org.junit.jupiter.api.Test;
 
 public class PeliculaTest {
 	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-	
 	public void miPrimerTest() {
 		int num = 3;
 		assertTrue(num == 3);
