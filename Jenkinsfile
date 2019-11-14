@@ -32,7 +32,7 @@ pipeline {
         stage('Compile') {
             steps {
                 echo "------------>Compile<------------"
-                //sh 'gradle clean'
+                sh 'gradle clean'
                 sh 'gradle --b ./build.gradle compileJava'
             }
         }
