@@ -51,7 +51,12 @@ pipeline {
                 sh 'gradle --b ./build.gradle build -x test'
             }
         }
-
+		stage('Unit Tests') {
+           steps {
+               echo "------------>Unit Tests<------------"
+               sh 'gradle --b ./build.gradle test'
+           }
+       }
         stage('Static Code Analysis') {
             steps{
                 echo '------------>An�lisis de c�digo est�tico<------------'
