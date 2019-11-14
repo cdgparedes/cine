@@ -25,7 +25,7 @@ pipeline {
                 echo "------------>Checkout<------------"
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
                         doGenerateSubmoduleConfigurations: false, extensions: [], gitTool:
-                        'Git_Centos', submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitHub_cdgparedes', url: 'https://github.com/cdgparedes/CeibaADN']]])
+                        'Git_Centos', submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitHub_cdgparedes', url: 'https://github.com/cdgparedes/cine']]])
             }
         }
 
