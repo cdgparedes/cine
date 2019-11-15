@@ -5,12 +5,10 @@ public class Pelicula{
 	public String genero;
 	public String detalle;
 
-	public Pelicula() {
-
-	}
-
 	public Pelicula(String nombre, String genero, String detalle) {
-		super();
+		// ValidadorArgumentos.validarVacios(nombre);
+		// ValidadorArgumentos.validarVacios(genero);
+		// ValidadorArgumentos.validarVacios(detalle);
 		this.nombre = nombre;
 		this.genero = genero;
 		this.detalle = detalle;

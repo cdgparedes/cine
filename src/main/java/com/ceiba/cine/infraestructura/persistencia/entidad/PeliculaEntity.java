@@ -14,8 +14,14 @@ public class PeliculaEntity {
 
 	@Column(nullable = false)
 	private String nombre;
+	@Column(nullable = false)
 	private String genero;
+	@Column(nullable = false)
 	private String detalle;
+	
+	public PeliculaEntity() {
+	}
+	
 	public PeliculaEntity(Long id, String nombre, String genero, String detalle) {
 		this.id = id;
 		this.nombre = nombre;
