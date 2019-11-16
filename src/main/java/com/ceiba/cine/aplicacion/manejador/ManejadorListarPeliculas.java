@@ -4,8 +4,8 @@ import java.util.Collection;
 
 import org.springframework.stereotype.Component;
 
-import com.ceiba.cine.dominio.ServicioListarPelicula;
 import com.ceiba.cine.dominio.modelo.dto.DtoPelicula;
+import com.ceiba.cine.dominio.servicio.ServicioListarPelicula;
 
 @Component
 public class ManejadorListarPeliculas {

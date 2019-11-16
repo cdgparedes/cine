@@ -8,4 +8,6 @@ public interface DaoPelicula {
 
 	List<DtoPelicula> listar();
 	
+	void crear(DtoPelicula dtoPelicula);
+	
 }

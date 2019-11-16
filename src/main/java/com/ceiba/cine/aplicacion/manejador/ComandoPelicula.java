@@ -1,14 +1,15 @@
-package com.ceiba.cine.dominio.modelo;
+package com.ceiba.cine.aplicacion.manejador;
 
-public class Pelicula{
-	public String nombre;
-	public String genero;
-	public String detalle;
+import java.io.Serializable;
 
-	public Pelicula(String nombre, String genero, String detalle) {
-		// ValidadorArgumentos.validarVacios(nombre);
-		// ValidadorArgumentos.validarVacios(genero);
-		// ValidadorArgumentos.validarVacios(detalle);
+public class ComandoPelicula implements Serializable {
+
+	private String nombre;
+	private String genero;
+	private String detalle;
+	
+	public ComandoPelicula(String nombre, String genero, String detalle) {
+		super();
 		this.nombre = nombre;
 		this.genero = genero;
 		this.detalle = detalle;

@@ -1,4 +1,4 @@
-package com.ceiba.cine.dominio;
+package com.ceiba.cine.dominio.servicio;
 
 import java.util.Collection;
 
