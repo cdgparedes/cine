@@ -21,6 +21,9 @@ public class ManejadorCrearPelicula {
 	public void ejecutar(ComandoPelicula comandoPelicula) {
 		Pelicula pelicula = this.fabricaPelicula.crear(comandoPelicula);
 		DtoPelicula dtoPelicula = new DtoPelicula();
+		dtoPelicula.setDetalle(pelicula.getDetalle());
+		dtoPelicula.setGenero(pelicula.getGenero());
+		dtoPelicula.setNombre(pelicula.getNombre());
 		this.servicioCrearPelicula.ejecutar(dtoPelicula);
 	}
 	

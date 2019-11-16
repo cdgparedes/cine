@@ -7,7 +7,11 @@ public class ComandoPelicula implements Serializable {
 	private String nombre;
 	private String genero;
 	private String detalle;
-	
+
+	public ComandoPelicula() {
+		super();
+	}
+
 	public ComandoPelicula(String nombre, String genero, String detalle) {
 		super();
 		this.nombre = nombre;
