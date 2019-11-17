@@ -1,2 +1,2 @@
-INSERT INTO pelicula(id,nombre, genero, detalle) VALUES('Jumanji', 'diversión', 'Una mescla de diversion y aventura');
-INSERT INTO pelicula(id,nombre, genero, detalle) VALUES('Joker', 'terror', 'Personaje con problemas de psicosis');
+INSERT INTO pelicula(id,nombre, genero, detalle,fechaEstreno) VALUES('Jumanji', 'diversión', 'Una mescla de diversion y aventura',"2019-11-16");
+INSERT INTO pelicula(id,nombre, genero, detalle,fechaEstreno) VALUES('Joker', 'terror', 'Personaje con problemas de psicosis',"2019-11-15");

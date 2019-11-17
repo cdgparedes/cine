@@ -24,6 +24,7 @@ public class ManejadorCrearPelicula {
 		dtoPelicula.setDetalle(pelicula.getDetalle());
 		dtoPelicula.setGenero(pelicula.getGenero());
 		dtoPelicula.setNombre(pelicula.getNombre());
+		dtoPelicula.setFechaEstreno(pelicula.getFechaEstreno());
 		this.servicioCrearPelicula.ejecutar(dtoPelicula);
 	}
 	

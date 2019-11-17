@@ -1,22 +1,25 @@
 package com.ceiba.cine.aplicacion.manejador;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class ComandoPelicula implements Serializable {
 
 	private String nombre;
 	private String genero;
 	private String detalle;
+	private Date fechaEstreno;
 
 	public ComandoPelicula() {
 		super();
 	}
 
-	public ComandoPelicula(String nombre, String genero, String detalle) {
+	public ComandoPelicula(String nombre, String genero, String detalle, Date fechaEstreno) {
 		super();
 		this.nombre = nombre;
 		this.genero = genero;
 		this.detalle = detalle;
+		this.fechaEstreno = fechaEstreno;
 	}
 
 	public String getNombre() {
@@ -42,5 +45,15 @@ public class ComandoPelicula implements Serializable {
 	public void setDetalle(String detalle) {
 		this.detalle = detalle;
 	}
+
+	public Date getFechaEstreno() {
+		return fechaEstreno;
+	}
+
+	public void setFechaEstreno(Date fechaEstreno) {
+		this.fechaEstreno = fechaEstreno;
+	}
+	
+	
 
 }

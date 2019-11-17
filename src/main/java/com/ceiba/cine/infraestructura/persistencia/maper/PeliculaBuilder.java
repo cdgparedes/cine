@@ -36,7 +36,7 @@ public class PeliculaBuilder {
 		peliculaEntity.setNombre(dtoPelicula.getNombre());
 		peliculaEntity.setGenero(dtoPelicula.getGenero());
 		peliculaEntity.setDetalle(dtoPelicula.getDetalle());
-
+		peliculaEntity.setFechaEstreno(dtoPelicula.getFechaEstreno());
 		return peliculaEntity;
 	}
 }

@@ -1,5 +1,6 @@
 package com.ceiba.cine.infraestructura.controlador;
 
+//import java.time.LocalDate;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class ControladorPelicula {
 
 	private final ManejadorListarPeliculas manejadorListarPeliculas;
 	private final ManejadorCrearPelicula manejadorCrearPelicula;
+
 
 	@Autowired
 	public ControladorPelicula(ManejadorListarPeliculas manejadorListarPeliculas,

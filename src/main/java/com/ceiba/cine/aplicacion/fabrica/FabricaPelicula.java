@@ -8,6 +8,6 @@ import com.ceiba.cine.dominio.modelo.entidad.Pelicula;
 @Component
 public class FabricaPelicula {
 	public Pelicula crear(ComandoPelicula comandoPelicula) {
-		return new Pelicula(comandoPelicula.getNombre(), comandoPelicula.getGenero(), comandoPelicula.getDetalle());
+		return new Pelicula(comandoPelicula.getNombre(), comandoPelicula.getGenero(), comandoPelicula.getDetalle(),comandoPelicula.getFechaEstreno());
 	}
 }

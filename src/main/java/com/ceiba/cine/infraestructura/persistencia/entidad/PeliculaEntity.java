@@ -1,5 +1,7 @@
 package com.ceiba.cine.infraestructura.persistencia.entidad;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,15 +20,19 @@ public class PeliculaEntity {
 	private String genero;
 	@Column(nullable = false)
 	private String detalle;
+	@Column(nullable = false)
+	public Date fechaEstreno;
 
 	public PeliculaEntity() {
 	}
 
-	public PeliculaEntity(Long id, String nombre, String genero, String detalle) {
+	public PeliculaEntity(Long id, String nombre, String genero, String detalle, Date fechaEstreno) {
 		this.id = id;
 		this.nombre = nombre;
 		this.genero = genero;
 		this.detalle = detalle;
+		this.fechaEstreno = fechaEstreno;
+		
 	}
 
 	public Long getId() {
@@ -60,5 +66,14 @@ public class PeliculaEntity {
 	public void setDetalle(String detalle) {
 		this.detalle = detalle;
 	}
+
+	public Date getFechaEstreno() {
+		return fechaEstreno;
+	}
+
+	public void setFechaEstreno(Date fechaEstreno) {
+		this.fechaEstreno = fechaEstreno;
+	}
+	
 
 }
