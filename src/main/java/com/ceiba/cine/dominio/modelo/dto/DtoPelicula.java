@@ -13,7 +13,6 @@ public class DtoPelicula {
 	}
 
 	public DtoPelicula(String nombre, String detalle, String genero, Date fechaEstreno) {
-		super();
 		this.nombre = nombre;
 		this.detalle = detalle;
 		this.genero = genero;

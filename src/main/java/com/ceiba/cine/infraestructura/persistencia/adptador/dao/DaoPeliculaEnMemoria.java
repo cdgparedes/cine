@@ -15,6 +15,11 @@ public class DaoPeliculaEnMemoria implements DaoPelicula {
 
 	@Autowired
 	private PeliculaJpa peliculaJpa;
+	
+	public DaoPeliculaEnMemoria(PeliculaJpa peliculaJpa) {
+		this.peliculaJpa=peliculaJpa;
+		
+	}
 
 	@Override
 	public List<DtoPelicula> listar() {

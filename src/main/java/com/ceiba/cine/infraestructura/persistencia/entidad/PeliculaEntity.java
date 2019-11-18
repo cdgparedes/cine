@@ -7,8 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "Pelicula")
+/*@Entity(name = "Pelicula")*/
+@Entity
+@Table(name = "Pelicula")
 public class PeliculaEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,7 +24,7 @@ public class PeliculaEntity {
 	@Column(nullable = false)
 	private String detalle;
 	@Column(nullable = false)
-	public Date fechaEstreno;
+	private Date fechaEstreno;
 
 	public PeliculaEntity() {
 	}

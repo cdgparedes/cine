@@ -17,10 +17,18 @@ public class PeliculaBuilder {
 
 		return listaPeliculas;
 	}
-
+	
+	/**
+	 * Metodo que convierte una entidad a dominio
+	 * @param peliculaEntity
+	 * @return dtoPelicula
+	 */
 	public static DtoPelicula convertirADominio(PeliculaEntity peliculaEntity) {
 		DtoPelicula dtoPelicula = new DtoPelicula();
 		dtoPelicula.setNombre(peliculaEntity.getNombre());
+		dtoPelicula.setGenero(peliculaEntity.getGenero());
+		dtoPelicula.setFechaEstreno(peliculaEntity.getFechaEstreno());
+		dtoPelicula.setDetalle(peliculaEntity.getDetalle());
 
 		return dtoPelicula;
 	}
@@ -28,7 +36,7 @@ public class PeliculaBuilder {
 	/**
 	 * Metodo que convierte una entidad a un dto
 	 * @param dtoPelicula
-	 * @return
+	 * @return peliculaEntity
 	 */
 	public static PeliculaEntity convertirAEntidad(DtoPelicula dtoPelicula) {
 		PeliculaEntity peliculaEntity = new PeliculaEntity();
