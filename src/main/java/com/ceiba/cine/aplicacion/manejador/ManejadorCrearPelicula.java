@@ -6,6 +6,7 @@ import com.ceiba.cine.aplicacion.fabrica.FabricaPelicula;
 import com.ceiba.cine.dominio.modelo.dto.DtoPelicula;
 import com.ceiba.cine.dominio.modelo.entidad.Pelicula;
 import com.ceiba.cine.dominio.servicio.ServicioCrearPelicula;
+import com.ceiba.cine.infraestructura.persistencia.entidad.PeliculaEntity;
 
 @Component
 public class ManejadorCrearPelicula {
@@ -18,14 +19,10 @@ public class ManejadorCrearPelicula {
 		this.fabricaPelicula = fabricaPelicula;
 	}
 	
-	public void ejecutar(ComandoPelicula comandoPelicula) {
+	public PeliculaEntity ejecutar(ComandoPelicula comandoPelicula) {
 		Pelicula pelicula = this.fabricaPelicula.crear(comandoPelicula);
-		DtoPelicula dtoPelicula = new DtoPelicula();
-		dtoPelicula.setDetalle(pelicula.getDetalle());
-		dtoPelicula.setGenero(pelicula.getGenero());
-		dtoPelicula.setNombre(pelicula.getNombre());
-		dtoPelicula.setFechaEstreno(pelicula.getFechaEstreno());
-		this.servicioCrearPelicula.ejecutar(dtoPelicula);
+		
+		return this.servicioCrearPelicula.ejecutar(pelicula);
 	}
 	
 }

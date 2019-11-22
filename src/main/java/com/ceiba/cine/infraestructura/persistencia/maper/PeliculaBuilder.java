@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ceiba.cine.dominio.modelo.dto.DtoPelicula;
+import com.ceiba.cine.dominio.modelo.entidad.Pelicula;
 import com.ceiba.cine.infraestructura.persistencia.entidad.PeliculaEntity;
 
 public class PeliculaBuilder {
@@ -38,13 +39,13 @@ public class PeliculaBuilder {
 	 * @param dtoPelicula
 	 * @return peliculaEntity
 	 */
-	public static PeliculaEntity convertirAEntidad(DtoPelicula dtoPelicula) {
+	public static PeliculaEntity convertirAEntidad(Pelicula pelicula) {
 		PeliculaEntity peliculaEntity = new PeliculaEntity();
-
-		peliculaEntity.setNombre(dtoPelicula.getNombre());
-		peliculaEntity.setGenero(dtoPelicula.getGenero());
-		peliculaEntity.setDetalle(dtoPelicula.getDetalle());
-		peliculaEntity.setFechaEstreno(dtoPelicula.getFechaEstreno());
+		peliculaEntity.setId(pelicula.getId());
+		peliculaEntity.setNombre(pelicula.getNombre());
+		peliculaEntity.setGenero(pelicula.getGenero());
+		peliculaEntity.setDetalle(pelicula.getDetalle());
+		peliculaEntity.setFechaEstreno(pelicula.getFechaEstreno());
 		return peliculaEntity;
 	}
 }

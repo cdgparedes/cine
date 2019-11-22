@@ -4,24 +4,25 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class ComandoPelicula implements Serializable {
-
+	private Long id;
 	private String nombre;
 	private String genero;
 	private String detalle;
 	private Date fechaEstreno;
 
 	public ComandoPelicula() {
-		super();
+		
 	}
 
 	public ComandoPelicula(String nombre, String genero, String detalle, Date fechaEstreno) {
-		super();
+		
 		this.nombre = nombre;
 		this.genero = genero;
 		this.detalle = detalle;
 		this.fechaEstreno = fechaEstreno;
 	}
-
+	
+	
 	public String getNombre() {
 		return nombre;
 	}

@@ -16,7 +16,7 @@ public class ManejadorListarPeliculas {
 		this.servicioListarPelicula = servicioListarPelicula;
 	}
 	
-	public Collection<DtoPelicula> ejecutar() {
+	public Collection<DtoPelicula> ejecutar( ) {
 		return this.servicioListarPelicula.ejecutar();
 	}
 }
