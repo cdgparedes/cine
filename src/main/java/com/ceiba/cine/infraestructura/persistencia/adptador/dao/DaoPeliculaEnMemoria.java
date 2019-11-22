@@ -25,7 +25,7 @@ public class DaoPeliculaEnMemoria implements DaoPelicula {
 
 	@Override
 	public List<DtoPelicula> listar() {
-		return PeliculaBuilder.convertirListaADominio(peliculaJpa.findAll());
+		return PeliculaBuilder.convertirListaPeliculaEntityAPeliculasDto(peliculaJpa.findAll());
 	}
 
 	@Override
@@ -37,9 +37,7 @@ public class DaoPeliculaEnMemoria implements DaoPelicula {
 	@Override
 	public void actualizar(Pelicula pelicula) {
 		//peliculaJpa.findById(id)
-		System.out.println("actualizar pelicula con id pelicula:" + pelicula.getId());
 		PeliculaEntity peliculaEntidad=PeliculaBuilder.convertirAEntidad(pelicula);
-		System.out.println("actualizar pelicula con id entidad:" + peliculaEntidad.getId());
 		peliculaJpa.save(peliculaEntidad);
 		
 		

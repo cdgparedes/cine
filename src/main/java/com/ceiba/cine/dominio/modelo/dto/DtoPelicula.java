@@ -8,15 +8,17 @@ public class DtoPelicula {
 	private String detalle;
 	private String genero;
 	private Date fechaEstreno;
+	private int precio;
 
 	public DtoPelicula() {
 	}
 
-	public DtoPelicula(String nombre, String detalle, String genero, Date fechaEstreno) {
+	public DtoPelicula(String nombre, String detalle, String genero, Date fechaEstreno,int precio) {
 		this.nombre = nombre;
 		this.detalle = detalle;
 		this.genero = genero;
 		this.fechaEstreno = fechaEstreno;
+		this.precio=precio;
 	}
 
 	public String getNombre() {
@@ -50,5 +52,14 @@ public class DtoPelicula {
 	public void setFechaEstreno(Date fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
 	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	
 
 }

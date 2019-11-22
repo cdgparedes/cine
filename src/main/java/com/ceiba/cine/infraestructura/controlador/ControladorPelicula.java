@@ -25,7 +25,7 @@ import com.ceiba.cine.dominio.modelo.dto.DtoPelicula;
 import com.ceiba.cine.infraestructura.persistencia.entidad.PeliculaEntity;
 
 @RestController
-@RequestMapping("/privada/peliculas")
+@RequestMapping("/privada/peliculas")//
 public class ControladorPelicula {
 
 	private final ManejadorListarPeliculas manejadorListarPeliculas;
@@ -44,7 +44,7 @@ public class ControladorPelicula {
 
 	@PostMapping("/crear-pelicula")
 	@ResponseStatus(HttpStatus.CREATED)
-	public PeliculaEntity crear(@RequestBody ComandoPelicula comandoUsuario) {
+	public PeliculaEntity crear(@RequestBody ComandoPelicula comandoUsuario) {//corregir
 		return this.manejadorCrearPelicula.ejecutar(comandoUsuario);
 	}
 

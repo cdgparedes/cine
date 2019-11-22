@@ -9,18 +9,22 @@ import com.ceiba.cine.infraestructura.persistencia.entidad.PeliculaEntity;
 
 public class PeliculaBuilder {
 
-	public static List<DtoPelicula> convertirListaADominio(List<PeliculaEntity> listaPeliculaEntity) {
+	/**
+	 * Metodo que convierte una lista de peliculas Entity a Lista de peliculas DTO
+	 * @param listaPeliculaEntity
+	 * @return
+	 */
+	public static List<DtoPelicula> convertirListaPeliculaEntityAPeliculasDto(List<PeliculaEntity> listaPeliculaEntity) {
 		List<DtoPelicula> listaPeliculas = new ArrayList<DtoPelicula>();
-
 		for (PeliculaEntity peliculaEntity : listaPeliculaEntity) {
 			listaPeliculas.add(convertirADominio(peliculaEntity));
 		}
-
 		return listaPeliculas;
 	}
 	
 	/**
 	 * Metodo que convierte una entidad a dominio
+	 * 
 	 * @param peliculaEntity
 	 * @return dtoPelicula
 	 */
@@ -35,7 +39,37 @@ public class PeliculaBuilder {
 	}
 
 	/**
+	 * Metodo que convierte una lista de peliculas DTO a Lista de peliculas del Dominio
+	 * @param listaPeliclaDto
+	 * @return
+	 */
+	public static List<Pelicula> convertirListaPeliculaDtoAPeliculaDominio(List<DtoPelicula> listaPeliclaDto) {
+		List<Pelicula> listaPeliculas = new ArrayList<Pelicula>();
+		for (DtoPelicula peliculaDto : listaPeliclaDto) {
+			listaPeliculas.add(convertirDeDtoADominioPelicula(peliculaDto));
+		}
+		return listaPeliculas;
+	}
+	
+	/**
+	 * Metodo que convierte una pelicula Dto A pelicula Dominio
+	 * @param dtoPelicula
+	 * @return
+	 */
+	public static Pelicula convertirDeDtoADominioPelicula(DtoPelicula dtoPelicula) {
+		Pelicula pelicula = new Pelicula();
+		pelicula.setNombre(dtoPelicula.getNombre());
+		pelicula.setGenero(dtoPelicula.getGenero());
+		pelicula.setFechaEstreno(dtoPelicula.getFechaEstreno());
+		pelicula.setDetalle(dtoPelicula.getDetalle());
+
+		return pelicula;
+	}
+
+
+	/**
 	 * Metodo que convierte una entidad a un dto
+	 * 
 	 * @param dtoPelicula
 	 * @return peliculaEntity
 	 */

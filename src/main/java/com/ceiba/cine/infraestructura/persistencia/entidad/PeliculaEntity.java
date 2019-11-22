@@ -25,16 +25,19 @@ public class PeliculaEntity {
 	private String detalle;
 	@Column(nullable = false)
 	private Date fechaEstreno;
+	@Column(nullable = true)
+	private int precio;
 
 	public PeliculaEntity() {
 	}
 
-	public PeliculaEntity(Long id, String nombre, String genero, String detalle, Date fechaEstreno) {
+	public PeliculaEntity(Long id, String nombre, String genero, String detalle, Date fechaEstreno, int precio) {
 		this.id = id;
 		this.nombre = nombre;
 		this.genero = genero;
 		this.detalle = detalle;
 		this.fechaEstreno = fechaEstreno;
+		this.precio = precio;
 		
 	}
 
@@ -77,6 +80,15 @@ public class PeliculaEntity {
 	public void setFechaEstreno(Date fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
 	}
-	
 
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	
+	
+	
 }

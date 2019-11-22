@@ -8,15 +8,24 @@ public class Pelicula {
 	public String genero;
 	public String detalle;
 	public Date fechaEstreno;
+	public int precio;
     //validaciones ,nombre,genero construir dentro del constructor
-	public Pelicula(String nombre, String genero, String detalle,Date fechaEstreno) {
+	
+	
+	
+	public Pelicula(String nombre, String genero, String detalle,Date fechaEstreno,int precio) {
 		
 		this.nombre = nombre;
 		this.genero = genero;
 		this.detalle = detalle;
 		this.fechaEstreno = fechaEstreno;
+		this.precio=precio;
 	}
 	
+	public Pelicula() {//modelos anemicos 
+		super();
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -55,6 +64,14 @@ public class Pelicula {
 
 	public void setFechaEstreno(Date fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
 	}
 
 	

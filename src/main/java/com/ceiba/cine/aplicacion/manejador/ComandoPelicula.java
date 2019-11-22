@@ -9,17 +9,19 @@ public class ComandoPelicula implements Serializable {
 	private String genero;
 	private String detalle;
 	private Date fechaEstreno;
+	private int precio; 
 
 	public ComandoPelicula() {
 		
 	}
 
-	public ComandoPelicula(String nombre, String genero, String detalle, Date fechaEstreno) {
+	public ComandoPelicula(String nombre, String genero, String detalle, Date fechaEstreno,int precio) {
 		
 		this.nombre = nombre;
 		this.genero = genero;
 		this.detalle = detalle;
 		this.fechaEstreno = fechaEstreno;
+		this.precio=precio;
 	}
 	
 	
@@ -54,6 +56,15 @@ public class ComandoPelicula implements Serializable {
 	public void setFechaEstreno(Date fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
 	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	
 	
 	
 
