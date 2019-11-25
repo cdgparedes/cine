@@ -1,19 +1,20 @@
 package com.ceiba.cine.dominio.modelo.dto;
 
-import java.util.Date;
+import java.time.LocalDate;
+//import java.util.Date;
 
 public class DtoPelicula {
 
 	private String nombre;
 	private String detalle;
 	private String genero;
-	private Date fechaEstreno;
+	private LocalDate fechaEstreno;
 	private int precio;
 
 	public DtoPelicula() {
 	}
 
-	public DtoPelicula(String nombre, String detalle, String genero, Date fechaEstreno,int precio) {
+	public DtoPelicula(String nombre, String detalle, String genero, LocalDate fechaEstreno,int precio) {
 		this.nombre = nombre;
 		this.detalle = detalle;
 		this.genero = genero;
@@ -45,11 +46,11 @@ public class DtoPelicula {
 		this.genero = genero;
 	}
 
-	public Date getFechaEstreno() {
+	public LocalDate getFechaEstreno() {
 		return fechaEstreno;
 	}
 
-	public void setFechaEstreno(Date fechaEstreno) {
+	public void setFechaEstreno(LocalDate fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
 	}
 

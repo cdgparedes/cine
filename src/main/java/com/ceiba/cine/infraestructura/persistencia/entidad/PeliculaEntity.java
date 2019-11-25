@@ -1,6 +1,7 @@
 package com.ceiba.cine.infraestructura.persistencia.entidad;
 
-import java.util.Date;
+import java.time.LocalDate;
+//import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,14 +25,14 @@ public class PeliculaEntity {
 	@Column(nullable = false)
 	private String detalle;
 	@Column(nullable = false)
-	private Date fechaEstreno;
+	private LocalDate fechaEstreno;
 	@Column(nullable = true)
 	private int precio;
 
 	public PeliculaEntity() {
 	}
 
-	public PeliculaEntity(Long id, String nombre, String genero, String detalle, Date fechaEstreno, int precio) {
+	public PeliculaEntity(Long id, String nombre, String genero, String detalle, LocalDate fechaEstreno, int precio) {
 		this.id = id;
 		this.nombre = nombre;
 		this.genero = genero;
@@ -73,11 +74,11 @@ public class PeliculaEntity {
 		this.detalle = detalle;
 	}
 
-	public Date getFechaEstreno() {
+	public LocalDate getFechaEstreno() {
 		return fechaEstreno;
 	}
 
-	public void setFechaEstreno(Date fechaEstreno) {
+	public void setFechaEstreno(LocalDate fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
 	}
 

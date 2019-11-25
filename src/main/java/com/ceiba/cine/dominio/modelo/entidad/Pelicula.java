@@ -1,19 +1,19 @@
 package com.ceiba.cine.dominio.modelo.entidad;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Pelicula {
 	public Long id;
 	public String nombre;
 	public String genero;
 	public String detalle;
-	public Date fechaEstreno;
+	public LocalDate fechaEstreno;
 	public int precio;
     //validaciones ,nombre,genero construir dentro del constructor
 	
 	
 	
-	public Pelicula(String nombre, String genero, String detalle,Date fechaEstreno,int precio) {
+	public Pelicula(String nombre, String genero, String detalle, LocalDate fechaEstreno,int precio) {
 		
 		this.nombre = nombre;
 		this.genero = genero;
@@ -58,11 +58,11 @@ public class Pelicula {
 		this.detalle = detalle;
 	}
 
-	public Date getFechaEstreno() {
+	public LocalDate getFechaEstreno() {
 		return fechaEstreno;
 	}
 
-	public void setFechaEstreno(Date fechaEstreno) {
+	public void setFechaEstreno(LocalDate fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
 	}
 
